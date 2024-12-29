@@ -58,7 +58,7 @@ body{
   .exercise-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #c8a7f5; /* Light pastel background color */
+    background-color: #c8a7f5; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -66,7 +66,7 @@ body{
   }
   
   .exercise-link:hover {
-    background-color: #c0b0ff; /* Lighter shade for hover effect */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: #c0b0ff; 
+    transform: scale(1.05); 
   }
   

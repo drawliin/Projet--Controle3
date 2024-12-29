@@ -13,8 +13,8 @@
   .clock {
     font-size: 7rem;
     font-weight: bold;
-    color: #A294F9; /* Vibrant purple for the clock text */
-    background-color: #f4f2f7; /* Subtle background for the clock */
+    color: #A294F9; 
+    background-color: #f4f2f7; 
     padding: 20px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -32,7 +32,7 @@
     font-size: 2rem;
     font-weight: 500;
     color: #fff;
-    background-color: #A294F9; /* Default button background */
+    background-color: #A294F9; 
     border: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -41,12 +41,12 @@
   }
   
   .buttons button:hover {
-    background-color: #CDC1FF; /* Lighter shade for hover effect */
-    transform: translateY(-3px); /* Lift effect */
+    background-color: #CDC1FF; 
+    transform: translateY(-3px); 
   }
   
   .buttons button:active {
-    background-color: #E5D9F2; /* Even lighter shade on click */
-    transform: translateY(1px); /* Slight press-down effect */
+    background-color: #E5D9F2; 
+    transform: translateY(1px); 
   }
   

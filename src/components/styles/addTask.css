@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    color: #4A4A4A; /* Text color */
+    color: #4A4A4A; 
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -19,8 +19,8 @@ body {
 
 /* Task Manager Container */
 .taskManagerContainer {
-    width: 50%; /* Wider container */
-    background: #FFFFFF; /* White background */
+    width: 50%; 
+    background: #FFFFFF; 
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -32,7 +32,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #A294F9; /* Bold purple */
+    color: #A294F9; 
     text-align: center;
 }
 
@@ -41,27 +41,27 @@ body {
 }
 /* Input Field */
 .taskManagerContainer input {
-    width: 55%; /* Full width minus button width + spacing */
+    width: 55%; 
     padding: 10px 15px;
     margin-bottom: 15px;
-    border: 1px solid #CDC1FF; /* Soft purple border */
+    border: 1px solid #CDC1FF;
     border-radius: 5px;
     outline: none;
     font-size: 1rem;
-    background: #E5D9F2; /* Lavender background */
-    color: #4A4A4A; /* Text color */
+    background: #E5D9F2; 
+    color: #4A4A4A; 
     transition: all 0.3s ease-in-out;
 }
 
 .taskManagerContainer input:focus {
-    border-color: #A294F9; /* Bold purple border */
+    border-color: #A294F9; 
     box-shadow: 0 0 5px #A294F9;
 }
 
 /* Button */
 .taskManagerContainer button {
-    background: #A294F9; /* Bold purple */
-    color: #FFFFFF; /* White text */
+    background: #A294F9;
+    color: #FFFFFF; 
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
@@ -73,8 +73,8 @@ body {
 }
 
 .taskManagerContainer button:hover {
-    background: #CDC1FF; /* Soft purple */
-    color: #A294F9; /* Bold purple text */
+    background: #CDC1FF; 
+    color: #A294F9; 
 }
 
 /* Task List */
@@ -86,7 +86,7 @@ body {
 }
 
 .taskManagerContainer ul li {
-    background: #E5D9F2; /* Lavender background */
+    background: #E5D9F2;
     margin-bottom: 10px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -98,12 +98,12 @@ body {
 
 .taskManagerContainer ul li span {
     font-size: 1rem;
-    color: #4A4A4A; /* Text color */
+    color: #4A4A4A;
 }
 
 /* Task Buttons */
 .taskManagerContainer ul li button {
-    background: #b8abec; /* Soft purple */
+    background: #b8abec;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -113,6 +113,6 @@ body {
 }
 
 .taskManagerContainer ul li button:hover {
-    background: #A294F9; /* Bold purple */
-    color: #FFFFFF; /* White text */
+    background: #A294F9; 
+    color: #FFFFFF; 
 }
