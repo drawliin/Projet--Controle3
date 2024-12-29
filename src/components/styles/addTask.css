@@ -29,11 +29,11 @@ body {
 
 /* Heading */
 .taskManagerContainer h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #A294F9; /* Bold purple */
     text-align: center;
-    font-weight: 600;
 }
 
 .taskManagerContainer div{
