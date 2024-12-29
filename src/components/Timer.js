@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { increment_hour } from './actions/actions';
 import { increment_minute } from './actions/actions';
@@ -8,6 +8,17 @@ function Timer() {
 
     const data = useSelector(state => state);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        const timerInterval = setInterval(() => {
+            dispatch(increment_minute());
+        }, 60000)
+
+        return () => {
+            clearInterval(timerInterval)
+        }
+    }, [])
+
 
     return (
         <div className='clock-container'>
