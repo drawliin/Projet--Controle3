@@ -1,4 +1,6 @@
 import React, {useState, useRef} from 'react'
+import './styles/addTask.css'
+
 
 function AddTask(){
 
@@ -51,16 +53,30 @@ function AddTask(){
     return (
         <div className='taskManagerContainer'>
             <h1>Task Manager</h1>
-            <input type='text' className='task-input' placeholder='Enter task...' value={newTask} onChange={(e) => setNewTask(e.target.value)} onKeyDown={handleTasks} ref={input}/>
-            <button onClick={handleTasks} disabled={!newTask.trim()} className='add-task-button'>{edit.isEditing ? 'Edit Task': 'Add Task'}</button>
+            <div>
+                <input 
+                    type='text' 
+                    placeholder='Enter task...' 
+                    value={newTask} 
+                    onChange={(e) => setNewTask(e.target.value)} 
+                    onKeyDown={handleTasks} 
+                    ref={input}/>
+                <button 
+                    onClick={handleTasks} 
+                    disabled={!newTask.trim()}
+                >
+                        {edit.isEditing ? 'Edit Task': 'Add Task'}
+                    </button>
+            </div>
+            
 
-            <ul className='task-list'>
+            <ul>
                 {tasks.map((element, index) => {
                     return(
-                        <li key={index} className='task-item'>
+                        <li key={index}>
                             <span>{element}</span>
-                            <button onClick={() => handleEdit(index)} className='edit-button'>Modifier</button>
-                            <button onClick={() => handleDelete(index)} className='delete-button'>Supprimer</button>
+                            <button onClick={() => handleEdit(index)} >Modifier</button>
+                            <button onClick={() => handleDelete(index)} >Supprimer</button>
                         </li>
                     )           
                 })}

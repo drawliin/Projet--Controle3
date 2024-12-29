@@ -4,17 +4,22 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     color: #4A4A4A; /* Text color */
-    background: #F5EFFF; /* Light background */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+}
 
 /* Task Manager Container */
 .taskManagerContainer {
-    width: 60%; /* Wider container */
+    width: 50%; /* Wider container */
     background: #FFFFFF; /* White background */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -31,9 +36,12 @@ body {
     font-weight: 600;
 }
 
+.taskManagerContainer div{
+    text-align: center;
+}
 /* Input Field */
 .taskManagerContainer input {
-    width: calc(100% - 110px); /* Full width minus button width + spacing */
+    width: 55%; /* Full width minus button width + spacing */
     padding: 10px 15px;
     margin-bottom: 15px;
     border: 1px solid #CDC1FF; /* Soft purple border */
@@ -61,7 +69,7 @@ body {
     cursor: pointer;
     margin-left: 10px;
     transition: background-color 0.3s ease;
-    width: 90px; /* Button width */
+    width: 35%px; /* Button width */
 }
 
 .taskManagerContainer button:hover {
