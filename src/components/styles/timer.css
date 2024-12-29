@@ -6,7 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     padding: 20px;
   }
   
@@ -35,13 +34,13 @@
     background-color: #A294F9; 
     border: none;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .buttons button:hover {
-    background-color: #CDC1FF; 
+    background-color: #b8abebda; 
     transform: translateY(-3px); 
   }
   

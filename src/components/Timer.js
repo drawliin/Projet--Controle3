@@ -6,7 +6,7 @@ import './styles/timer.css'
 
 function Timer() {
 
-    const data = useSelector(state => state);
+    const {hour, minute} = useSelector(state => state);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -17,13 +17,13 @@ function Timer() {
         return () => {
             clearInterval(timerInterval)
         }
-    }, [])
+    }, [dispatch])
 
 
     return (
         <div className='clock-container'>
             <div className='clock'>
-                <span>{data.hour.toString().padStart(2,'0')}</span> : <span>{data.minute.toString().padStart(2,'0')}</span>
+                <span>{hour.toString().padStart(2,'0')}</span> : <span>{minute.toString().padStart(2,'0')}</span>
             </div>
             <div className='buttons'>
                 <button onClick={() => dispatch(increment_hour())}>Add Hours</button>
