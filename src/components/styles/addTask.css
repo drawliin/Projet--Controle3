@@ -103,7 +103,7 @@ body {
 
 /* Task Buttons */
 .taskManagerContainer ul li button {
-    background: #CDC1FF; /* Soft purple */
+    background: #b8abec; /* Soft purple */
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
