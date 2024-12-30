@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import './styles/addTask.css'
 
 
@@ -12,13 +12,25 @@ function AddTask(){
     });
     const input = useRef(null);
 
+    useEffect(() => {
+            const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+            if(storedTasks !== null && storedTasks.length > 0){
+                setTasks(storedTasks)
+            }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+    }, [tasks])
+
     function handleTasks(e){
         if(e.type === 'click' || (e.type === 'keydown' && e.key === 'Enter') ){
             
             const task = newTask.trim();
             if(!edit.isEditing && task){
                 if(!tasks.includes(task)){  
-                    setTasks([...tasks, task]);
+                    setTasks(t => [...t, task]);
+                    
                 }else{
                     alert('Task already exists');
                 }
@@ -43,12 +55,11 @@ function AddTask(){
     function handleEdit(i){
         const taskToEdit = tasks[i];
         setNewTask(taskToEdit);
-        input.current.focus();
         setEdit({index: i, isEditing: true});
+        input.current.focus();
 
     }
 
-    
 
     return (
         <div className='taskManagerContainer'>
@@ -81,11 +92,6 @@ function AddTask(){
                     )           
                 })}
             </ul>
-            
-
-            
-
-
         </div>
     )
 }
